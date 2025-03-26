@@ -9,6 +9,51 @@ export type Json =
 export type Database = {
   public: {
     Tables: {
+      transcriptions: {
+        Row: {
+          created_at: string | null
+          duration: number | null
+          file_name: string
+          file_path: string
+          file_url: string
+          id: string
+          language: string
+          status: string
+          transcript: Json | null
+          transliteration: Json | null
+          updated_at: string | null
+          user_id: string
+        }
+        Insert: {
+          created_at?: string | null
+          duration?: number | null
+          file_name: string
+          file_path: string
+          file_url: string
+          id?: string
+          language?: string
+          status?: string
+          transcript?: Json | null
+          transliteration?: Json | null
+          updated_at?: string | null
+          user_id: string
+        }
+        Update: {
+          created_at?: string | null
+          duration?: number | null
+          file_name?: string
+          file_path?: string
+          file_url?: string
+          id?: string
+          language?: string
+          status?: string
+          transcript?: Json | null
+          transliteration?: Json | null
+          updated_at?: string | null
+          user_id?: string
+        }
+        Relationships: []
+      }
       users: {
         Row: {
           avatar_url: string | null
